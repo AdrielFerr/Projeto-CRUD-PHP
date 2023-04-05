@@ -7,6 +7,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <title> Cadastro</title>
+    <style>
+          body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: Linear-gradien(to right, rgb(20,147,220), rgb(17,54,71));
+          }
+    </style>  
   </head>
   <body>
   <nav class="navbar navbar-expand-lg bg-light">
@@ -48,11 +54,9 @@
                       case "editar":
                         include("editar-usuario.php"); 
                       break;                       
-                      default:
-                         print"<h1>Bem vindos!</h1>";     
-                    }
-              ?>
-          </div> 
+                    }  
+              ?>      
+          </div>
       </div> 
     </div>   
 
