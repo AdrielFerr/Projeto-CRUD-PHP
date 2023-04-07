@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(empty($_SESSION)){
+      print "<script>location.href='index.html';</script>";
+    }
+?>
 <!doctype html>
 <html lang="pt-BR">
   <head>

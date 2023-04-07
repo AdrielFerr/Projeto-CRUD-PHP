@@ -1,3 +1,9 @@
+<?php
+    @session_start();
+    if(empty($_SESSION)){
+      print "<script>location.href='index.html';</script>";
+    }
+?>
 <h1>Novo Usuário</h1>
 <form action = "?page=salvar" method = "POST">
    <input type = "hidden" name = "acao" value = "cadastrar">

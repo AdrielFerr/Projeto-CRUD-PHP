@@ -1,5 +1,10 @@
 <h1>Listar Usuários</h1>
 <?php
+    @session_start();
+    if(empty($_SESSION)){
+        print "<script>location.href='index.html';</script>";
+    }
+    
     $sql = "Select * from usuarios";
 
     $res = $conn->query($sql);
