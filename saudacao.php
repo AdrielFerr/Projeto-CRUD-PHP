@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    if(empty($_SESSION)){
-      print "<script>location.href='index.html';</script>";
-    }
-?>
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -21,22 +15,23 @@
     </style>  
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Cadastro</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="?page=novo">Novo Usuário</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="?page=listar">Listar Usuários</a>
+        </li>
+        <li class="nav-item">
+          <?php
+                print " <a href ='logout.php' class='btn btn-danger'>Sair</a>";
+          ?>      
         </li>
       </ul>
     </div>

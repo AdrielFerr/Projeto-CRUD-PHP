@@ -1,13 +1,11 @@
 <?php
-    @session_start();
-    if(empty($_SESSION)){
-        print "<script>location.href='index.html';</script>";
-    }
     switch ($_REQUEST["acao"]) {
         case 'cadastrar':
             $nome  =  $_POST["nome"];
             $email =  $_POST["email"];
             $senha = md5($_POST["senha"]);
+
+            var_dump($nome);
 
             $sql = "INSERT INTO usuarios (nome,
             email, senha) VALUES (
