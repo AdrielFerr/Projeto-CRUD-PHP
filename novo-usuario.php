@@ -40,12 +40,23 @@
                     justify-content: center;
                     display: flex;
                 }
+
+                .Rodape{
+                    grid-area: rodape;
+                    background-color:#fff;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    padding-right: 20px;
+                    color: #444;
+                }
             </style> 
     <div class= "Salvar">
         <div class="container-xl">
             <form>
-                    <form action = "?page=salvar" method = "POST">
-                    <input type = "hidden" name = "acao" value = "cadastrar">
+                    <form action = "?page=novo-usuario" method = "POST">
+                    <input type = "hidden" name = "acao" value = "cadastrar" method = "POST">
                             <div class = "mb-3">
                                     <label class="form-label">Nome</label>
                                     <input type ="text" name = "nome" class = "form-control">
@@ -66,5 +77,39 @@
             </form>
         </div>         
     </div>
+
+    <div class = "container">
+            <div class = "row">
+                <div class = "col mt-5">
+                    <?php
+                            switch ($_REQUEST["acao"]) {
+                                case 'cadastrar':
+                                    $nome  =  $_POST["nome"];
+                                    $email =  $_POST["email"];
+                                    $senha =  $_POST["senha"];
+
+                                    $sql = "INSERT INTO usuarios (nome,
+                                    email, senha) VALUES (
+                                    '{$nome}', '{$email}', '{$senha}')";
+
+                                    $res = $conn->query($sql);
+                                    
+                                    if($res ==true){   
+                                        print "<script>alert('Cadastro com sucesso');</script>";
+                                        print "<script>location.href='?page=novo-usuario';</script>";
+                                    }else{
+                                        print "<script>alert('Não foi possível cadastrar o usuário');</script>";
+                                        print "<script>location.href='?page=novo-usuario';</script>";
+                                    }
+                                    break;
+                                }
+
+                    ?> 
+                </div> 
+            </div> 
+     </div> 
+
+    <footer class="rodape">
+        PROJECT ADR 2023 
 </body>            
 </html>

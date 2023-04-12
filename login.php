@@ -6,12 +6,12 @@
         print "<script>location.href='index.html';</script>";
     }
 
-    include('config_usuario_senha.php');
+    include('config.php');
 
     $usuario = $_POST["usuario"];
     $senha  = $_POST["senha"];
 
-    $sql = "SELECT * FROM usuarios
+    $sql = "SELECT * FROM sislogin
             WHERE usuario = '{$usuario}'
             AND senha = '{$senha}'";
 

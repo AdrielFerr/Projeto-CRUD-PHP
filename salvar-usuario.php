@@ -1,11 +1,11 @@
 <?php
+
+    /*include('config.php'); 
     switch ($_REQUEST["acao"]) {
         case 'cadastrar':
             $nome  =  $_POST["nome"];
             $email =  $_POST["email"];
             $senha = md5($_POST["senha"]);
-
-            var_dump($nome);
 
             $sql = "INSERT INTO usuarios (nome,
             email, senha) VALUES (
@@ -13,7 +13,7 @@
 
             $res = $conn->query($sql);
             
-            if($res ==true){
+            if($res ==true){   
                 print "<script>alert('Cadastro com sucesso');</script>";
                 print "<script>location.href='?page=listar';</script>";
             }else{
@@ -22,7 +22,7 @@
             }
             break;
 
-        case 'editar':
+        /* case 'editar':
             $nome  =  $_POST["nome"];
             $email =  $_POST["email"];
             $senha = md5($_POST["senha"]);            
@@ -60,8 +60,8 @@
                 print "<script>location.href='?page=listar';</script>";
             }
             break;
-        break;   
-    }
+        break;*/   
+    //}
 
 
 
