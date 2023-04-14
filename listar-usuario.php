@@ -1,5 +1,7 @@
-<h1>Listar Usuários</h1>
 <?php
+//--------------------------------------------------------------#EM ATUALIZAÇÃO-------------------------------------------------------------------------------------------//
+    include("Config.php");
+
     $sql = "Select * from usuarios";
 
     $res = $conn->query($sql);
@@ -23,8 +25,7 @@
             print "<td>".$row->id."</td>";
             print "<td>".$row->nome."</td>";
             print "<td>".$row->email."</td>";
-            print "<td><button onclick= \"location.href='?page=editar&id=".$row->id."';\" 
-                   class = 'btn-success'>Editar</button>
+            print "<td><button onclick= \"location.href='editar-usuario.php'".$row->id."';\"<a href='logout.php' class='btn btn-danger'>Editar</a>
                    
                    <button onclick= \" 
                    if(confirm('Tem certeza que deseja excluir?'))

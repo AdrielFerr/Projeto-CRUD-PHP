@@ -6,4 +6,8 @@
 
    $conn = new MySQLi(HOST,USER,PASS,BASE);
    
+   if (!$conn) 
+   {
+     die("Houve um erro:".mysql_connect_error());
+   }
 ?>

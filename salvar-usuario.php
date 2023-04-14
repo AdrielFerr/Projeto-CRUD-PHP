@@ -1,8 +1,6 @@
 <?php
+    include("config.php"); 
 
-    /*include('config.php'); 
-    switch ($_REQUEST["acao"]) {
-        case 'cadastrar':
             $nome  =  $_POST["nome"];
             $email =  $_POST["email"];
             $senha = md5($_POST["senha"]);
@@ -11,58 +9,58 @@
             email, senha) VALUES (
             '{$nome}', '{$email}', '{$senha}')";
 
-            $res = $conn->query($sql);
-            
-            if($res ==true){   
-                print "<script>alert('Cadastro com sucesso');</script>";
-                print "<script>location.href='?page=listar';</script>";
-            }else{
-                print "<script>alert('Não foi possível cadastrar o usuário');</script>";
-                print "<script>location.href='?page=listar';</script>";
-            }
-            break;
+           if (mysqli_query($conn,$sql)){
+              echo "<script>alert('Cadastro com sucesso');</script>";
+              print "<script>location.href='novo-usuario.php';</script>";
+           }
+           else{
+              print "<script>alert('Não foi possível cadastrar o usuário');</script>";
+           } 
+           mysqli_close($conn);
+?>   
 
-        /* case 'editar':
-            $nome  =  $_POST["nome"];
-            $email =  $_POST["email"];
-            $senha = md5($_POST["senha"]);            
+    /
+<!-- include("config.php");           
+        case 'editar':
+             $nome  =  $_POST["nome"];          -----------------------------#EM ATUALIZAÇÃO -------------------
+              $email =  $_POST["email"];
+             $senha = md5($_POST["senha"]);            
         
-            $sql = "UPDATE usuarios SET
+             $sql = "UPDATE usuarios SET
                         nome='{$nome}',
-                        email='{$email}',
-                        senha='{$senha}'
+                         email='{$email}',
+                         senha='{$senha}'
                     WHERE
                         id=".$_REQUEST["id"];    
 
-            $res = $conn->query($sql);
+             $res = $conn->query($sql);
+            
+             if($res ==true){
+                 print "<script>alert('Editado com sucesso');</script>";
+                 print "<script>location.href='?page=listar';</script>";
+             }else{
+                 print "<script>alert('Não foi possível editar o usuário');</script>";
+                print "<script>location.href='?page=listar';</script>";
+             }
+             break;
+
+         break;
+
+         case 'excluir':
+             $sql = "DELETE FROM usuarios WHERE id=".$_REQUEST["id"];
+
+             $res = $conn->query($sql);
             
             if($res ==true){
-                print "<script>alert('Editado com sucesso');</script>";
-                print "<script>location.href='?page=listar';</script>";
-            }else{
-                print "<script>alert('Não foi possível editar o usuário');</script>";
-                print "<script>location.href='?page=listar';</script>";
-            }
-            break;
-
-        break;
-
-        case 'excluir':
-            $sql = "DELETE FROM usuarios WHERE id=".$_REQUEST["id"];
-
-            $res = $conn->query($sql);
-            
-            if($res ==true){
-                print "<script>alert('Excluído com sucesso');</script>";
-                print "<script>location.href='?page=listar';</script>";
+                 print "<script>alert('Excluído com sucesso');</script>";
+                 print "<script>location.href='?page=listar';</script>";
             }else{
                 print "<script>alert('Não foi possível excluir o usuário');</script>";
                 print "<script>location.href='?page=listar';</script>";
             }
-            break;
-        break;*/   
-    //}
+             break;
+         break;  
+    }  -->
 
 
 
-?>

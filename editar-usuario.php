@@ -1,4 +1,7 @@
-<h1>Editar Usuário</h1>
+
+<!-- PÁGINA EM ATUALIZAÇÃO -->
+
+<h1>Editar Usuário</h1> 
 <form action = "?page=salvar" method = "POST">
    <input type = "hidden" name = "acao" value = "editar">
    <input type = "hidden" name = "id" value ="<?php print $row->id; ?>">
