@@ -24,7 +24,6 @@
                 print "<a href= 'listar-usuario.php' class='btn btn-info'>Lista de usuários</a>";
                 print "<a href='logout.php' class='btn btn-danger'>Sair</a>";
             ?>
-
         </div>
     </nav>
             <style>
@@ -67,10 +66,13 @@
                                     <label>Senha</label>
                                     <input type ="password" name = "senha" class = "form-control">
                             </div>
+                           
+
                             <div class = "mb-3">
                                     <button type = "submit" class = "btn
                                     btn-primary">Cadastrar</button>
-                            </div>    
+                            </div>
+                                            
             </form>
         </div>         
     </div>

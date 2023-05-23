@@ -25,6 +25,7 @@
     {
         $_SESSION["usuario"] = $usuario;
         $_SESSION["nome"]    = $row->nome;
+        $_SESSION["login"]   = 1;     
         $_SESSION["nivel"]   = $row->tipo;
         print "<script>location.href='novo-usuario.php';</script>";
     }
