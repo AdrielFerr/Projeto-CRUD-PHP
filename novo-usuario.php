@@ -11,47 +11,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
-    crossorigin="anonymous">
+    <!-- INCLUSÃO DO HEADER DO PROJETO -->
+    <?php include('header.php'); ?>
+
 </head>
 <body>
-    <nav class="navbar navbar-danger bg-warning">
-        <div class= "container-fluid">
-            <a class="navbar-brand">Sistema de cadastro</a>
-            <?php
-                print "Olá,".' '.$_SESSION["nome"];
-                print "<a href= 'listar-usuario.php' class='btn btn-info'>Lista de usuários</a>";
-                print "<a href='logout.php' class='btn btn-danger'>Sair</a>";
-            ?>
-        </div>
-    </nav>
-            <style>
-                body{
-                    
-                }
 
-                .Salvar{
-                    width: 100%;
-                    height: 100vh;
-                    align-items: left;
-                    justify-content: center;
-                    display: flex;
-                }
+    <style>
+        
 
-                .Rodape{
-                    grid-area: rodape;
-                    background-color:#fff;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                    font-size: 1.2rem;
-                    padding-right: 20px;
-                    color: #444;
-                }
-            </style> 
+        .Salvar{
+            width: 100%;
+            height: 100vh;
+            align-items: left;
+            justify-content: center;
+            display: flex;
+            margin-top: 100px;
+        }
+
+        .Rodape{
+            grid-area: rodape;
+            background-color:#fff;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 1.2rem;
+            padding-right: 20px;
+            color: #444;
+        }
+    </style> 
     <div class= "Salvar">
-        <div class="container-xl">
+        <div class="">
             <form action= "salvar-usuario.php" method = "POST">
                             <div class = "mb-3">
                                     <label class="form-label">Nome</label>
